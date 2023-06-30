@@ -449,8 +449,9 @@ function sortCitiesArray(arr) {
  *           [0,0,0,1,0],
  *           [0,0,0,0,1]]
  */
-function getIdentityMatrix(/* n */) {
-  throw new Error('Not implemented');
+function getIdentityMatrix(n) {
+  return new Array(n).fill(new Array(n).fill(0))
+    .map((arr, i) => arr.map((subarr, j) => (i === j ? 1 : 0)));
 }
 
 /**
