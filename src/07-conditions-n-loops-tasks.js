@@ -73,8 +73,12 @@ function getFactorial(n) {
  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
-function getSumBetweenNumbers(/* n1, n2 */) {
-  throw new Error('Not implemented');
+function getSumBetweenNumbers(n1, n2) {
+  if (n1 === n2) {
+    return n1;
+  }
+  const newN1 = n1 + 1;
+  return n1 + getSumBetweenNumbers(newN1, n2);
 }
 
 
@@ -356,7 +360,7 @@ function getCommonDirectoryPath(/* pathes */) {
 
 /**
  * Returns the product of two specified matrixes.
- * See details: https://en.wikipedia.org/wiki/Matrix_multiplication
+ * See details: https://en.wik ipedia.org/wiki/Matrix_multiplication
  *
  * @param {array} m1
  * @param {array} m2
